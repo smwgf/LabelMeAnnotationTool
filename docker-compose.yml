@@ -1,0 +1,12 @@
+version: "1.0"
+
+services:
+  labelme_annotation_tool:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    volumes: 
+      - ./share:/var/www/html/LabelMeAnnotationTool/Images/share
+    ports:
+      - "8080:80"
+    restart: always
